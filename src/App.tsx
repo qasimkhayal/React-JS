@@ -4,6 +4,8 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Home from "./components/Home";
 import Courses from "./components/CoursesGroup";
+import UserList from "./components/UserList";
+import UserDetails from "./components/UserDetails";
 function App() {
   return (
     <Router>
@@ -26,7 +28,16 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/users"
+                >
+                  Users
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/">
                   Home
                 </Link>
               </li>
@@ -64,6 +75,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />}></Route>
+            <Route path="/users" element={<UserList />}></Route>
+            <Route path="/users/id:" element={<UserDetails />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/courses" element={<Courses />}></Route>
