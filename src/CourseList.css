@@ -1,0 +1,12 @@
+th {
+  background-color: rgb(255, 213, 0);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+td {
+  background-color: black;
+  color: aliceblue;
+}
+table {
+  margin: auto;
+}

@@ -1,0 +1,9 @@
+h2 {
+  color: rgb(255, 213, 0);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-variant: small-caps;
+  font-size: 38px;
+  text-align: center;
+  background-color: black;
+  margin-top: 1px;
+}

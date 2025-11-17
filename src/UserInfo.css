@@ -1,0 +1,14 @@
+.card1{
+    border: 1px solid aqua;
+    border-radius: 4px ;
+    padding: 16px;
+    margin: auto;
+    box-shadow: 0 2px 4px yellow;
+    background-color: rgb(142, 182, 182);
+    text-align: center;
+}
+.card1 h3{
+    margin-top: 0;
+    color: antiquewhite;
+
+}
