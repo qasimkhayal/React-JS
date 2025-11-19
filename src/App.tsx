@@ -4,8 +4,10 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Home from "./components/Home";
 import Courses from "./components/CoursesGroup";
-import UserList from "./components/UserList";
+// import UserList from "./components/UserList";
 import UserDetails from "./components/UserDetails";
+import PostList from "./components/PostList";
+import UserListAssign from "./components/UserListAssign";
 function App() {
   return (
     <Router>
@@ -27,7 +29,7 @@ function App() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   className="nav-link active"
                   aria-current="page"
@@ -35,7 +37,7 @@ function App() {
                 >
                   Users
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link className="nav-link" to="/">
                   Home
@@ -54,6 +56,16 @@ function App() {
               <li className="nav-item">
                 <Link className="nav-link" to="/courses">
                   Courses
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/posts">
+                  Post List
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/users">
+                 User List
                 </Link>
               </li>
             </ul>
@@ -75,11 +87,13 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/users" element={<UserList />}></Route>
+            {/* <Route path="/users" element={<UserList />}></Route> */}
             <Route path="/users/id:" element={<UserDetails />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/courses" element={<Courses />}></Route>
+            <Route path="/posts" element={<PostList />}></Route>
+            <Route path="/users" element={<UserListAssign />}></Route>
           </Routes>
         </main>
       </div>
