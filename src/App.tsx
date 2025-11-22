@@ -7,7 +7,8 @@ import Courses from "./components/CoursesGroup";
 // import UserList from "./components/UserList";
 import UserDetails from "./components/UserDetails";
 import PostList from "./components/PostList";
-import UserListAssign from "./components/UserListAssign";
+import UserListAssign from "./assignments/a01/a01/UserListAssign";
+import ProductList from "./assignments/a01/a01/ProductList";
 function App() {
   return (
     <Router>
@@ -65,7 +66,12 @@ function App() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/users">
-                 User List
+                  User List
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/products">
+                  Product List
                 </Link>
               </li>
             </ul>
@@ -94,6 +100,7 @@ function App() {
             <Route path="/courses" element={<Courses />}></Route>
             <Route path="/posts" element={<PostList />}></Route>
             <Route path="/users" element={<UserListAssign />}></Route>
+            <Route path="/products" element={<ProductList />}></Route>
           </Routes>
         </main>
       </div>
