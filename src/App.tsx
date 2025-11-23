@@ -9,6 +9,10 @@ import UserDetails from "./components/UserDetails";
 import PostList from "./components/PostList";
 import UserListAssign from "./assignments/a01/a01/UserListAssign";
 import ProductList from "./assignments/a01/a01/ProductList";
+import ProductListA from "./components/ProductListA";
+import ProductListB from "./components/ProductListB";
+import Dishes from "./components/RecipeList";
+import RecipeList from "./components/RecipeList";
 function App() {
   return (
     <Router>
@@ -74,6 +78,21 @@ function App() {
                   Product List
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/product">
+                  Updated Products
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/product">
+                  Products B
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/recipes">
+                  Recipes
+                </Link>
+              </li>
             </ul>
             <form className="d-flex" role="search">
               <input
@@ -101,6 +120,9 @@ function App() {
             <Route path="/posts" element={<PostList />}></Route>
             <Route path="/users" element={<UserListAssign />}></Route>
             <Route path="/products" element={<ProductList />}></Route>
+            <Route path="/product" element={<ProductListA />}></Route>
+            <Route path="/product" element={<ProductListB />}></Route>
+            <Route path="/recipes" element={<RecipeList />}></Route>
           </Routes>
         </main>
       </div>
