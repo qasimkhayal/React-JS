@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Product = {
   id: number;
@@ -8,21 +8,21 @@ type Product = {
   catageory: string;
   image: string;
 };
-function ProductList() {
-  let [products, setProducts] = useState<Product[]>([]);
+function ProductListA() {
+  let [product, setProduct] = useState<Product[]>([]);
   const fetchProduct = async () => {
     let response = await fetch("https://fakestoreapi.com/products");
     let id = await response.json();
-    setProducts(id);
+    setProduct(id);
   };
+  useEffect(()=>{
+    fetchProduct();
+  },[]);
   return (
     <div className="container my-3">
       <h2 className="text-dark fw-bold">product List</h2>
-      <button className="btn btn-danger my-2" onClick={fetchProduct}>
-        Fetch Product
-      </button>
       <div className="row row-cols-1 row-cols-md-4 g-4">
-        {products.map((product) => (
+        {product.map((product) => (
           <div key={product.id}>
             <div className="col-md-4 " style={{ width: "auto" }}>
               <img
@@ -42,4 +42,4 @@ function ProductList() {
     </div>
   );
 }
-export default ProductList;
+export default ProductListA;
