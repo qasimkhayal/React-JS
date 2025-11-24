@@ -11,8 +11,7 @@ import UserListAssign from "./assignments/a01/a01/UserListAssign";
 import ProductList from "./assignments/a01/a01/ProductList";
 import ProductListA from "./components/ProductListA";
 import ProductListB from "./components/ProductListB";
-import Dishes from "./components/RecipeList";
-import RecipeList from "./components/RecipeList";
+import RecipeSearch from "./components/RecipeSearch";
 function App() {
   return (
     <Router>
@@ -122,7 +121,7 @@ function App() {
             <Route path="/products" element={<ProductList />}></Route>
             <Route path="/product" element={<ProductListA />}></Route>
             <Route path="/product" element={<ProductListB />}></Route>
-            <Route path="/recipes" element={<RecipeList />}></Route>
+            <Route path="/recipes" element={<RecipeSearch />}></Route>
           </Routes>
         </main>
       </div>
