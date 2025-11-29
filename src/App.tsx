@@ -12,6 +12,8 @@ import ProductList from "./assignments/a01/a01/ProductList";
 import ProductListA from "./components/ProductListA";
 import ProductListB from "./components/ProductListB";
 import RecipeSearch from "./components/RecipeSearch";
+import RecipeListA from "./components/RecipeListA";
+import RecipePages from "./components/RecipePages";
 function App() {
   return (
     <Router>
@@ -52,11 +54,11 @@ function App() {
                   Contact
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/about">
                   About
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link className="nav-link" to="/courses">
                   Courses
@@ -89,7 +91,12 @@ function App() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/recipes">
-                  Recipes
+                  Recipe Pages
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/recipe">
+                  Load Recipes
                 </Link>
               </li>
             </ul>
@@ -121,7 +128,9 @@ function App() {
             <Route path="/products" element={<ProductList />}></Route>
             <Route path="/product" element={<ProductListA />}></Route>
             <Route path="/product" element={<ProductListB />}></Route>
-            <Route path="/recipes" element={<RecipeSearch />}></Route>
+            {/* <Route path="/recipes" element={<RecipeSearch />}></Route> */}
+            <Route path="/recipe" element={<RecipeListA />}></Route>
+            <Route path="/recipes" element={<RecipePages />}></Route>
           </Routes>
         </main>
       </div>
