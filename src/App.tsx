@@ -12,8 +12,10 @@ import ProductList from "./assignments/a01/a01/ProductList";
 import ProductListA from "./components/ProductListA";
 import ProductListB from "./components/ProductListB";
 import RecipeSearch from "./components/RecipeSearch";
-import RecipeListA from "./components/RecipeListA";
+// import RecipeListA from "./components/RecipeListA";
 import RecipePages from "./components/RecipePages";
+import CourseList4 from "./components/CourseList4";
+import CourseAdd from "./CourseAdd";
 function App() {
   return (
     <Router>
@@ -60,15 +62,16 @@ function App() {
                 </Link>
               </li> */}
               <li className="nav-item">
-                <Link className="nav-link" to="/courses">
+                <Link className="nav-link" to="/course">
                   Courses
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/posts">
-                  Post List
+                <Link className="nav-link" to="/courses">
+                  Add Courses
                 </Link>
               </li>
+
               <li className="nav-item">
                 <Link className="nav-link" to="/users">
                   User List
@@ -94,11 +97,11 @@ function App() {
                   Recipe Pages
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/recipe">
                   Load Recipes
                 </Link>
-              </li>
+              </li> */}
             </ul>
             <form className="d-flex" role="search">
               <input
@@ -122,15 +125,17 @@ function App() {
             <Route path="/users/id:" element={<UserDetails />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/about" element={<About />}></Route>
-            <Route path="/courses" element={<Courses />}></Route>
+            {/* <Route path="/courses" element={<Courses />}></Route> */}
             <Route path="/posts" element={<PostList />}></Route>
             <Route path="/users" element={<UserListAssign />}></Route>
             <Route path="/products" element={<ProductList />}></Route>
             <Route path="/product" element={<ProductListA />}></Route>
             <Route path="/product" element={<ProductListB />}></Route>
-            {/* <Route path="/recipes" element={<RecipeSearch />}></Route> */}
-            <Route path="/recipe" element={<RecipeListA />}></Route>
+            <Route path="/recipes" element={<RecipeSearch />}></Route>
+            {/* <Route path="/recipe" element={<RecipeListA />}></Route> */}
             <Route path="/recipes" element={<RecipePages />}></Route>
+            <Route path="/course" element={<CourseList4 />}></Route>
+            <Route path="/courses" element={<CourseAdd />}></Route>
           </Routes>
         </main>
       </div>
